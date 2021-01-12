@@ -1,0 +1,38 @@
+@import '../../shared';
+
+
+
+.check-out{
+    width: 100%;
+    .checkout-container{
+        @include container;
+        .checkout-heading{
+            width: 100%;
+            text-align: center;
+        }
+        .product-lists{
+            width: 100%;
+            .list-title-wrapper{
+                width: 100%;
+                padding: 10px 0;
+                .list-header{
+                    display: flex;
+                    border-bottom: 1px solid rgba($color: $secondary, $alpha: 0.4);
+                    .list-left{
+                        width: 60%;
+                        text-align: left;
+                    }
+                    .list-right{
+                        width: 40%;
+                        display: flex;
+                        justify-content: space-between;
+                        .left-item{
+                            width: 100%;
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

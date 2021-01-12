@@ -1,0 +1,42 @@
+@import '../../shared';
+
+
+
+.home{
+    width: 100%;
+    .container{
+        @include container;
+        .home-heading{
+            width: 100%;
+            color: $secondary;
+        }
+        .filtering-section{
+            width: 100%;
+            .filtering-wrapper{
+                display: flex;
+                justify-content: center;
+                .filter{
+                    cursor: pointer;
+                    padding: 5px;
+                    margin: 0 5px;
+                    font-size: 0.7rem;
+                    color: $secondary;
+                    &:active{
+                        opacity: 0.5;
+                    }
+                    &.active{
+                        color: $special;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .products-container{
+            margin: 15px 0;
+            display: grid;
+            grid-template-columns: repeat(5,auto);
+            gap: 5px;
+        }
+        
+    }
+}

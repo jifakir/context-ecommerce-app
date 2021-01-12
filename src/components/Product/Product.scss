@@ -1,0 +1,55 @@
+@import '../../shared';
+
+
+
+.product-wrapper{
+    width: 100%;
+    margin: auto;
+    .product{
+        width: 95%;
+        margin: auto;
+        .product-image-wrapper{
+            width: 100%;
+            position: relative;
+            .product-image{
+                width: 100%;
+            }
+            .product-icons{
+                width: 100%;
+                position: absolute;
+                bottom: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .icon{
+                    width: 25px;
+                    height: 25px;
+                    font-size: 0.8rem;
+                    color: $secondary;
+                    background: $primary;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 8px;
+                    cursor: pointer;
+                    transition: all 500ms ease;
+                    &:hover{
+                        background: $special;
+                        color: $primary;
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+        }
+        .description{
+            color: $secondary;
+            .name{
+                margin: 0;
+            }
+            .price{
+                margin: 0;
+            }
+        }
+    }
+}

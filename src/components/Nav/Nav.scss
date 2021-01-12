@@ -1,0 +1,34 @@
+@import '../../shared';
+
+
+
+.nav{
+    background: $primary;
+    padding: 0.8rem 0.5rem;
+    box-shadow: 0 0 5px 3px rgba($color: $secondary, $alpha: 0.6);
+    .container{
+        @include container;
+        display: flex;
+        justify-content: space-between;
+        .logo-wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            color: $special;
+            text-transform: uppercase;
+        }
+        .nav-wrapper{
+            display: flex;
+            .cart-container{
+                position: relative;
+                .cart-dropdown{
+                    position: absolute;
+                    z-index: 1;
+                    top: 100%;
+                    right: 0;
+                }
+            }
+        }
+    }
+}

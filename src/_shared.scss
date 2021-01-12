@@ -1,0 +1,9 @@
+    $border: #EBEBEB;
+    $primary: #F6F6F6;
+    $secondary:#6F6F6F;
+    $special: #0db44dfb;
+    
+    @mixin container {
+        width: 90%;
+        margin: auto;
+    }
