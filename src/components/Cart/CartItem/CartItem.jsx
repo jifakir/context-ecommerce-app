@@ -6,17 +6,17 @@ import './CartItem.scss';
 
 
 
-const CartItem = ({name, price, quantity, total}) => {
-
+const CartItem = ({item}) => {
+    const {imageUrl, name, price, quantity} = item;
     return (
         <div className="cart-item">
             <div className="cart-item-wrapper">
                     <div className="product-image-wrapper">
-                        <img src='https://images.unsplash.com/photo-1527719327859-c6ce80353573?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8dHNoaXJ0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60' alt={`${name} photos`} className="product-image"/>
+                        <img src={imageUrl} alt={`${name}-photos`} className="product-image"/>
                     </div>
                     <div className="description">
-                        <p className="name">{name}T-Shirt</p>
-                        <p className="price">{price}3 X {quantity}$150</p>
+                        <p className="name">{name}</p>
+                        <p className="price">{quantity} X ${price}</p>
                     </div>
             </div>
         </div>
