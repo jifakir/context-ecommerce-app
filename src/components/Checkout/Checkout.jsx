@@ -35,7 +35,7 @@ const Checkout = () => {
                 <div className="sub-total">
                     <div className="cart-subtotal">
                         <p className="cart-total">
-                            Total:  ${cart.reduce((a,s) => a + (s.price*s.quantity),0)}
+                            {cart.length <= 0 ? "Cart is empty!" : `Total: $ ${cart.reduce((a,s) => a + (s.price*s.quantity),0)}`  }
                         </p>
                     </div>
                 </div>
