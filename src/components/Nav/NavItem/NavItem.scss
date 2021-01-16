@@ -10,6 +10,7 @@
     align-items: center;
     text-transform: uppercase;
     cursor: pointer;
+    color: $secondary;
     .item-name{
         font-size: 1.2rem;
         font-weight: 500;
@@ -20,6 +21,7 @@
     .icon{
         font-size: 1.5rem;
         position: relative;
+        color: $secondary;
         .toes{
             position: absolute;
             width: 15px;

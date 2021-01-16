@@ -1,19 +1,14 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import Header from '../Header/Header';
 import Product from '../Product/Product';
 import data from '../../data';
 import './Home.scss';
-import { CartContext } from '../../context/CartContext';
-
 
 
 const Home = () => {
     const [filter, setFilter] = useState('all');
-    const contextValue = useContext(CartContext);
 
-    console.log("Updated Value")
-    console.log("Context Value:", contextValue);
-
+    
     const filterHanlder = (e) => {
         const value = e.target.textContent;
         setFilter(value.toLowerCase());
@@ -22,7 +17,6 @@ const Home = () => {
     const products = data.map(items => items.title.toLowerCase() === filter ? items.items : null ).filter(a => a);
 
 
-    console.log("Products:", products);
     return (
         <div className="home">
             <Header />

@@ -9,6 +9,7 @@
     .item-container{
         width: 100%;
         padding: 10px 0;
+        color: $secondary;
         border-bottom: 1px solid rgba($color: $secondary, $alpha: 0.4);
         display: flex;
         .item-left{
@@ -39,6 +40,7 @@
                         border: none;
                         outline: 0;
                         cursor: pointer;
+                        color: $secondary;
                         &:active{
                             background: $special;
                         }
@@ -47,6 +49,7 @@
                         width: 20px;
                         border: none;
                         outline: 0;
+                        color: $secondary;
                         background: #EFEFEF;
                         &::-webkit-inner-spin-button,
                         &::-webkit-outer-spin-button{

@@ -135,7 +135,7 @@ const SHOP_DATA = [
         {
           id: 20,
           name: 'Grey Jean Jacket',
-          imageUrl: 'https://i.ibb.co/N71k1ML/grey-jean-jacket.png',
+          imageUrl: 'https://images.unsplash.com/photo-1606243769346-784daeb4562f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JleSUyMGplYW4lMjBqYWNrZXR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
           price: 90
         },
         {
@@ -160,31 +160,31 @@ const SHOP_DATA = [
         {
           id: 23,
           name: 'Blue Tanktop',
-          imageUrl: 'https://i.ibb.co/7CQVJNm/blue-tank.png',
+          imageUrl: 'https://images.unsplash.com/photo-1596703343725-7ca01bda9a45?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8Ymx1ZSUyMGRyZXNzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
           price: 25
         },
         {
           id: 24,
           name: 'Floral Blouse',
-          imageUrl: 'https://i.ibb.co/4W2DGKm/floral-blouse.png',
+          imageUrl: 'https://images.unsplash.com/photo-1572005901620-75fdc3a40941?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OTN8fGZsb3JhbCUyMGRyZXNzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
           price: 20
         },
         {
           id: 25,
           name: 'Floral Dress',
-          imageUrl: 'https://i.ibb.co/KV18Ysr/floral-skirt.png',
+          imageUrl: 'https://images.unsplash.com/photo-1590823146273-3391f40c0324?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8d29tYW4lMjBkcmVzc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
           price: 80
         },
         {
           id: 26,
           name: 'Red Dots Dress',
-          imageUrl: 'https://i.ibb.co/N3BN1bh/red-polka-dot-dress.png',
+          imageUrl: 'https://images.unsplash.com/photo-1525097113990-71347c548ccc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8cmVkJTIwZHJlc3N8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
           price: 80
         },
         {
           id: 27,
           name: 'Striped Sweater',
-          imageUrl: 'https://i.ibb.co/KmSkMbH/striped-sweater.png',
+          imageUrl: 'https://images.unsplash.com/photo-1587389274453-771b30d25a71?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzJ8fHN0cmlwZWQlMjBzd2VhdGVyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
           price: 45
         },
         {

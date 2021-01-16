@@ -36,12 +36,12 @@
                     margin: 0 5px;
                     font-size: 0.7rem;
                     color: $secondary;
-                    &:active{
-                        opacity: 0.5;
-                    }
+                    font-weight: bold;
                     &.active{
                         color: $special;
-                        font-weight: bold;
+                    }
+                    &:active{
+                        opacity: 0.5;
                     }
                 }
             }
@@ -49,9 +49,15 @@
         .products-container{
             margin: 15px 0;
             display: grid;
-            grid-template-columns: repeat(5,auto);
-            grid-row: 250px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(auto, 300px);
             gap: 5px;
+            @media (min-width: 600px){
+                grid-template-columns: repeat(3, 1fr);
+            }
+            @media (min-width: 1000px){
+                grid-template-columns: repeat(4, 1fr);
+            }
         }
         
     }

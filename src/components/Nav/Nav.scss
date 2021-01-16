@@ -5,7 +5,7 @@
 .nav{
     background: $primary;
     padding: 0.8rem 0.5rem;
-    box-shadow: 0 0 5px 3px rgba($color: $secondary, $alpha: 0.6);
+    // box-shadow: 0 0 5px 3px rgba($color: $secondary, $alpha: 0.6);
     .container{
         @include container;
         display: flex;

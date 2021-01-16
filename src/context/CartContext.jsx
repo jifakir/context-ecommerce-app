@@ -18,13 +18,18 @@ const CartProvider = ({children}) => {
     const removeItem = productId => {
         dispatch({type: "REMOVE_ITEM", productId})
     }
+    const deleteItem = productId => {
+        dispatch({type: "DELETE_ITEM", productId})
+    }
+
 
     return (
         <CartContext.Provider value={{
             products: data,
             cart: cartState.cart,
             addItem,
-            removeItem
+            removeItem,
+            deleteItem
         }}>
             {children}
         </CartContext.Provider>

@@ -17,10 +17,10 @@ const addItemToCart = (product, state) => {
     
 }
 const removeItemFromCart = (productId, state) => {
-
+    
     const cartItems = [...state.cart];
     const cartItemIndex = cartItems.findIndex(item => item.id === productId);
-
+    
     const updatedItem = {...cartItems[cartItemIndex]}
         updatedItem.quantity--;
 
@@ -29,6 +29,17 @@ const removeItemFromCart = (productId, state) => {
     }else{
         cartItems[cartItemIndex] = updatedItem;
     };
+
+    return {...state, cart: cartItems};
+    
+}
+
+const deleteItemFromCart = (productId, state) => {
+    
+    const cartItems = [...state.cart];
+    const cartItemIndex = cartItems.findIndex(item => item.id === productId);
+    
+    cartItems.splice(cartItemIndex,1);
 
     return {...state, cart: cartItems};
     
@@ -45,7 +56,9 @@ const cartReducer = (state, action) => {
         case "ADD_ITEM":
             return addItemToCart(action.product, state);
         case "REMOVE_ITEM":
-            return removeItemFromCart(action.product, state);
+            return removeItemFromCart(action.productId, state);
+        case "DELETE_ITEM":
+            return deleteItemFromCart(action.productId, state);
         default :
             return state;
     }

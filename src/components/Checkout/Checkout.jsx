@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
 import CheckItem from './CheckItem/CheckItem';
 
 import './Checkout.scss';
 
 
 const Checkout = () => {
+
+    const {cart} = useContext(CartContext);
 
     return (
         <div className="check-out">
@@ -24,17 +27,15 @@ const Checkout = () => {
                                 <p className='left-item'>Total</p>
                             </div>
                         </div>
-                        <CheckItem price='$250' total='500' />
-                        <CheckItem price='$250' total='500' />
-                        <CheckItem price='$250' total='500' />
-                        <CheckItem price='$250' total='500' />
-                        <CheckItem price='$250' total='500' />
+                        {
+                            cart.map((item, index) => <CheckItem item={item} />)
+                        }
                     </div>
                 </div>
                 <div className="sub-total">
                     <div className="cart-subtotal">
                         <p className="cart-total">
-                            Total:  540 taka
+                            Total:  ${cart.reduce((a,s) => a + (s.price*s.quantity),0)}
                         </p>
                     </div>
                 </div>

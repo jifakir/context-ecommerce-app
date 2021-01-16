@@ -1,40 +1,42 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { MdDelete } from 'react-icons/md';
+import { CartContext } from '../../../context/CartContext';
 import './CheckItem.scss';
 
 
 
 
-const CheckItem = ({productName, price, total }) => {
-
+const CheckItem = ({item }) => {
+        const {id, imageUrl, name, price, quantity} = item;
+        const {addItem, removeItem, deleteItem} = useContext(CartContext);
     return (
         <div className="checkout-item">
             <div className="item-container">
                 <div className="item-left">
                     <div className="image-wrapper">
-                        <img src="//#endregion" alt={productName}/>
+                        <img src={imageUrl} alt={name}/>
                     </div>
                     <div className="product-name">
-                        <p className="name">Name</p>
+                        <p className="name">{name}</p>
                     </div>
                 </div>
                 <div className="item-right">
                     <div className="item">
                         <p className="price-wrapper">
-                            {price}
+                            ${price}
                         </p>
                     </div>
                     <div className="item quantity-wrapper">
-                        <button className="btn-minus">-</button>
-                        <input type="number" name="quantity" id="quantity" className='quantity'/>
-                        <button className="btn-plus">+</button>
+                        <button className="btn-minus" onClick={() => removeItem(id)}>-</button>
+                        <input readOnly type="number" value={quantity} name="quantity" id="quantity" className='quantity'/>
+                        <button className="btn-plus" onClick={() => addItem(item)}>+</button>
                     </div>
                     <div className="item last-item">
                         <p className="total-wrapper">
-                            ${total}
+                            ${price*quantity}
                         </p>
                         <div className="delete-icon">
-                            <MdDelete />
+                            <MdDelete onClick={()=> deleteItem(id)} />
                         </div>
                     </div>
                 </div>

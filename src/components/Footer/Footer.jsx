@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     FaHeart, 
     FaPaypal, 
@@ -16,20 +16,33 @@ import './Footer.scss';
 
 
 const Footer = () => {
-
+    const [state, setState] = useState('');
+    const [subscribe, setSubscribed] = useState('Subscribe');
+    const onChangeHandler = (e) => {
+        const value = e.target.value;
+        if(!value){setSubscribed('Subscribe')};
+        setState(value);
+    };
+    const onSubmitHandler = (e) => {
+        e.preventDefault();
+        const match = /\w+@\w/g;
+        if(!state.match(match)) return;
+        if(!state) return;
+        setSubscribed('Subscribed');
+    }
     return (
         <div className="footer">
             <div className="container">
                 <div className="news-letter-subscribing-div">
                     <div className="joining-description">
-                        <h2>Join Our Newsletter Now</h2>
+                        <h2 className="newsletter-header">Join Our Newsletter Now</h2>
                         <p>Get E-mail updates about our latest shop and special offers.</p>
                     </div>
                     <div className="subscribing-box">
-                        <form className="subscribing-wrapper">
-                            <input type="email" placeholder='Enter Your Email' name="input-box" id="email" className="input-box"/>
+                        <form onSubmit={onSubmitHandler} className="subscribing-wrapper">
+                            <input onChange={onChangeHandler} value={state} type="email" placeholder='Enter Your Email' name="input-box" id="email" className="input-box"/>
                             <button className="submit-btn">
-                                Subscribe
+                                {subscribe}
                             </button>
                         </form>
                     </div>
