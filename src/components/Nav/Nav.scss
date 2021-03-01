@@ -5,7 +5,7 @@
 .nav{
     background: $primary;
     padding: 0.8rem 0.5rem;
-    // box-shadow: 0 0 5px 3px rgba($color: $secondary, $alpha: 0.6);
+    user-select: none;
     .container{
         @include container;
         display: flex;
@@ -17,9 +17,16 @@
             font-weight: 700;
             color: $special;
             text-transform: uppercase;
+            cursor: pointer;
         }
         .nav-wrapper{
             display: flex;
+            .items-wrapper{
+                display: none;
+                @media (min-width: 700px) {
+                    display: flex;
+                }
+            }
             .cart-container{
                 position: relative;
                 .cart-dropdown{

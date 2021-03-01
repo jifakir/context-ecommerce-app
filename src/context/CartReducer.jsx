@@ -2,8 +2,8 @@ import React from 'react';
 
 
 
-const addItemToCart = (product, state) => {
-    const cartItems = [...state.cart];
+const addItemToCart = (product, cart) => {
+    const cartItems = [...cart];
     const cartItemIndex = cartItems.findIndex(item => item.id === product.id);
     if(cartItemIndex<0){
         cartItems.push({...product, quantity: 1})
@@ -13,12 +13,12 @@ const addItemToCart = (product, state) => {
         cartItems[cartItemIndex] = updatedItem;
     };
 
-    return {...state, cart: cartItems};
+    return [...cartItems];
     
 }
 const removeItemFromCart = (productId, state) => {
     
-    const cartItems = [...state.cart];
+    const cartItems = [...state];
     const cartItemIndex = cartItems.findIndex(item => item.id === productId);
     
     const updatedItem = {...cartItems[cartItemIndex]}
@@ -30,18 +30,18 @@ const removeItemFromCart = (productId, state) => {
         cartItems[cartItemIndex] = updatedItem;
     };
 
-    return {...state, cart: cartItems};
+    return [...cartItems];
     
 }
 
 const deleteItemFromCart = (productId, state) => {
     
-    const cartItems = [...state.cart];
+    const cartItems = [...state];
     const cartItemIndex = cartItems.findIndex(item => item.id === productId);
     
     cartItems.splice(cartItemIndex,1);
 
-    return {...state, cart: cartItems};
+    return [...cartItems];
     
 }
 

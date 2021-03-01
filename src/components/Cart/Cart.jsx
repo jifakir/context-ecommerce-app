@@ -9,20 +9,29 @@ import CartItem from './CartItem/CartItem';
 
 
 
-const Cart = () => {
+const Cart = ({clicked}) => {
     
     const history = useHistory();
     const {cart} = useContext(CartContext);
-
+    console.log(cart);
     return (
         <div className="cart" >
             <div className="cart-wrapper">
                 <div className="cart-items-wrapper">
                     {
-                        cart.length <= 0 ? <h4 className="empty-cart"><MdRemoveShoppingCart/> Cart is Empty.</h4> : cart.map(item => <CartItem key={item.id} item={item} />)
+                        cart.length <= 0 ? 
+                        <h4 className="empty-cart"><MdRemoveShoppingCart/> Cart is Empty.</h4> :
+                        cart.map(item => <CartItem key={item.id} item={item} />)
                     }
                 </div>
-                <div style={{display: `${cart.length <= 0 ? 'none' : 'block'}`}} className="checkout-btn" onClick={() => history.push('/checkout')}>
+                <div 
+                style={{display: `${cart.length <= 0 ? 'none' : 'block'}`}} 
+                className="checkout-btn" 
+                onClick={ ()=> {
+                    history.push('/checkout'); 
+                    clicked();
+                }}
+                >
                     Checkout
                 </div>
             </div>

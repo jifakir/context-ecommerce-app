@@ -11,17 +11,22 @@
         padding: 10px 0;
         color: $secondary;
         border-bottom: 1px solid rgba($color: $secondary, $alpha: 0.4);
-        display: flex;
+        
+        @media (min-width: 700px){
+            display: flex;
+        }
         .item-left{
             width: 60%;
             display: flex;
             align-items: center;
             .image-wrapper{
+                width: 15%;
                 img{
-
+                    width: 100%;
                 }
             }
             .product-name{
+                width: 100%;
                 .name{
 
                 }
@@ -50,6 +55,7 @@
                         border: none;
                         outline: 0;
                         color: $secondary;
+                        text-align: center;
                         background: #EFEFEF;
                         &::-webkit-inner-spin-button,
                         &::-webkit-outer-spin-button{
