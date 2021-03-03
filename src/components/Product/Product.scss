@@ -5,6 +5,11 @@
 .product-wrapper{
     width: 100%;
     margin: auto;
+    &:hover{
+        .product-image{
+            transform: scale(1.2);
+        }
+    }
     .product{
         width: 95%;
         margin: auto;
@@ -12,9 +17,12 @@
             width: 100%;
             height: 250px;
             position: relative;
+            overflow: hidden;
+            user-select: none;
             .product-image{
                 width: 100%;
                 height: 100%;
+                transition: transform 1s ease-in-out;
             }
             .product-icons{
                 width: 100%;
